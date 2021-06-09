@@ -1,3 +1,4 @@
+import 'package:app/pages/cadastro.page.dart';
 import 'package:app/pages/home.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -80,7 +81,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  onPressed: () => {_navigateToNextScreen(context)},
+                  onPressed: () => {_navigateToHome(context)},
                 ),
               )),
           SizedBox(
@@ -94,7 +95,7 @@ class LoginPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
-              onPressed: () => {},
+              onPressed: () => {_navigateToCadastro(context)},
             ),
           )
         ],
@@ -102,8 +103,13 @@ class LoginPage extends StatelessWidget {
     ));
   }
 
-  void _navigateToNextScreen(BuildContext context) {
+  void _navigateToHome(BuildContext context) {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => HomePage()));
+  }
+
+  void _navigateToCadastro(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => CadastroPage()));
   }
 }
