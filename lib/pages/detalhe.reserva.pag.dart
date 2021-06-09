@@ -1,34 +1,24 @@
-import 'package:app/pages/reserva.efetuada.page.dart';
+import 'package:app/pages/reserva.cancelada.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class EstacionamentoPage extends StatelessWidget {
+class DetalheReservaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('4 Folhas'), backgroundColor: Colors.black),
+        appBar: AppBar(
+            title: Text('Detalhes da Reserva'), backgroundColor: Colors.black),
         body: Container(
           padding: EdgeInsets.only(top: 40, left: 40, right: 40),
           color: Colors.white,
           child: ListView(children: <Widget>[
             Text(
-              'Informações',
-              style: TextStyle(fontSize: 30),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Dias de funcionamento:',
+              'Estabelecimento',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
             ),
-            SizedBox(
-              height: 10,
-            ),
             Text(
-              'Segunda a Sábado',
+              '4 Folhas',
               style: TextStyle(fontSize: 20),
               textAlign: TextAlign.left,
             ),
@@ -36,15 +26,25 @@ class EstacionamentoPage extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'Horário:',
+              'Data',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
             ),
+            Text(
+              '08/06/2021',
+              style: TextStyle(fontSize: 20),
+              textAlign: TextAlign.left,
+            ),
             SizedBox(
-              height: 10,
+              height: 20,
             ),
             Text(
-              '8h as 18h',
+              'Horário',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left,
+            ),
+            Text(
+              '15h',
               style: TextStyle(fontSize: 20),
               textAlign: TextAlign.left,
             ),
@@ -55,9 +55,6 @@ class EstacionamentoPage extends StatelessWidget {
               'Contatos:',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
-            ),
-            SizedBox(
-              height: 10,
             ),
             Card(
                 child: ListTile(
@@ -77,16 +74,24 @@ class EstacionamentoPage extends StatelessWidget {
               ),
             )),
             SizedBox(
+              height: 40,
+            ),
+            SizedBox(
+              width: 150,
+              height: 150,
+              child: Image.asset("assets/qrcode.png"),
+            ),
+            SizedBox(
               height: 20,
             ),
             Container(
               height: 60,
               decoration: BoxDecoration(
-                  color: Colors.green[400],
+                  color: Colors.red[400],
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: TextButton(
                 child: Text(
-                  "Reservar",
+                  "Cancelar Reserva",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
@@ -99,6 +104,6 @@ class EstacionamentoPage extends StatelessWidget {
 
   void _navigateToMensagem(BuildContext context) {
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => ReservaEfetuadaPage()));
+        .push(MaterialPageRoute(builder: (context) => ReservaCanceladaPage()));
   }
 }
