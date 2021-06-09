@@ -1,5 +1,6 @@
 import 'package:app/pages/cadastro.page.dart';
 import 'package:app/pages/home.page.dart';
+import 'package:app/pages/recuperarSenha.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -53,37 +54,26 @@ class LoginPage extends StatelessWidget {
                 textAlign: TextAlign.right,
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
-              onPressed: () => {},
+              onPressed: () => {_navigateToRecuperarSenha(context)},
             ),
           ),
           SizedBox(
             height: 20,
           ),
           Container(
-              height: 60,
-              alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
-                  color: Colors.yellow[800],
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: SizedBox.expand(
-                child: TextButton(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Login",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                  onPressed: () => {_navigateToHome(context)},
-                ),
-              )),
+            height: 60,
+            decoration: BoxDecoration(
+                color: Colors.yellow[800],
+                borderRadius: BorderRadius.all(Radius.circular(5))),
+            child: TextButton(
+              child: Text(
+                "Login",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              onPressed: () => {_navigateToHome(context)},
+            ),
+          ),
           SizedBox(
             height: 20,
           ),
@@ -111,5 +101,10 @@ class LoginPage extends StatelessWidget {
   void _navigateToCadastro(BuildContext context) {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => CadastroPage()));
+  }
+
+  void _navigateToRecuperarSenha(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => RecuperarSenhaPage()));
   }
 }
