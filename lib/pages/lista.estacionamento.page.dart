@@ -15,55 +15,51 @@ class ListaEstacionamentosPage extends StatelessWidget {
           color: Colors.white,
           child: ListView(
             children: [
-              Container(
-                  height: 50,
-                  child: TextButton(
-                    child: Text(
-                      "4 Folhas",
-                      textAlign: TextAlign.right,
-                      style: TextStyle(color: Colors.black, fontSize: 16),
-                    ),
-                    onPressed: () => {_navigateToEstacionamento(context)},
-                  )),
+              Card(
+                  child: ListTile(
+                title: Text("4 Folhas"),
+                subtitle: Text("Av. Saudade 205"),
+                leading: CircleAvatar(
+                  child: Image.asset("assets/4folhas.png"),
+                ),
+                onTap: () => _navigateToEstacionamento(context),
+              )),
               SizedBox(
                 height: 20,
               ),
-              Container(
-                  height: 50,
-                  child: TextButton(
-                    child: Text(
-                      "2 Pinheiros",
-                      textAlign: TextAlign.right,
-                      style: TextStyle(color: Colors.black, fontSize: 16),
-                    ),
-                    onPressed: () => {},
-                  )),
+              Card(
+                  child: ListTile(
+                title: Text("2 Pinheiros"),
+                subtitle: Text("Av. Sampaio Vidal 1537"),
+                leading: CircleAvatar(
+                  child: Image.asset("assets/2pinheiros.png"),
+                ),
+                onTap: () => _navigateToEstacionamento(context),
+              )),
               SizedBox(
                 height: 20,
               ),
-              Container(
-                  height: 50,
-                  child: TextButton(
-                    child: Text(
-                      "Giga",
-                      textAlign: TextAlign.right,
-                      style: TextStyle(color: Colors.black, fontSize: 16),
-                    ),
-                    onPressed: () => {},
-                  )),
+              Card(
+                  child: ListTile(
+                title: Text("Giga"),
+                subtitle: Text("Av. Pres. Tancredo de Almeida 50"),
+                leading: CircleAvatar(
+                  child: Image.asset("assets/giga.png"),
+                ),
+                onTap: () => _navigateToEstacionamento(context),
+              )),
               SizedBox(
                 height: 20,
               ),
-              Container(
-                  height: 50,
-                  child: TextButton(
-                    child: Text(
-                      "Riachuelo",
-                      textAlign: TextAlign.right,
-                      style: TextStyle(color: Colors.black, fontSize: 16),
-                    ),
-                    onPressed: () => {},
-                  )),
+              Card(
+                  child: ListTile(
+                title: Text("Riachuelo"),
+                subtitle: Text("R. São Luiz 719"),
+                leading: CircleAvatar(
+                  child: Image.asset("assets/riachoelo.png"),
+                ),
+                onTap: () => _navigateToEstacionamento(context),
+              )),
             ],
           ),
         ));
