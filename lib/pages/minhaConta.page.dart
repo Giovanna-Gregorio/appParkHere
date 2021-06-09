@@ -3,6 +3,8 @@ import 'package:app/pages/minhas.reservas.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'editar.usuario.page.dart';
+
 class MinhaContaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,15 @@ class MinhaContaPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 50,
+              height: 30,
+            ),
+            ListTile(
+              title: Text("Editar Cadastro"),
+              leading: Icon(Icons.edit),
+              onTap: () => _navigateToEditar(context),
+            ),
+            SizedBox(
+              height: 10,
             ),
             ListTile(
               title: Text("Minhas Reservas"),
@@ -44,7 +54,7 @@ class MinhaContaPage extends StatelessWidget {
             ListTile(
                 title: Text("Avisos"), leading: Icon(Icons.article_rounded)),
             SizedBox(
-              height: 220,
+              height: 160,
             ),
             Container(
               height: 60,
@@ -72,5 +82,10 @@ class MinhaContaPage extends StatelessWidget {
   void _navigateToMinhasReservas(BuildContext context) {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => MinhasReservasPage()));
+  }
+
+  void _navigateToEditar(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => EditarUsuarioPage()));
   }
 }

@@ -3,6 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EstacionamentoPage extends StatelessWidget {
+  String dropdownValue = 'Selecione o horário';
+  String dropdownValueDia = 'Selecione o dia';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +80,39 @@ class EstacionamentoPage extends StatelessWidget {
               ),
             )),
             SizedBox(
+              height: 40,
+            ),
+            DropdownButtonFormField(
+              value: dropdownValueDia,
+              icon: const Icon(Icons.arrow_downward),
+              iconSize: 24,
+              items: <String>['Selecione o dia', '10/06', '11/06', '12/06']
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (String newValue) {},
+            ),
+            SizedBox(
               height: 20,
+            ),
+            DropdownButtonFormField(
+              value: dropdownValue,
+              icon: const Icon(Icons.arrow_downward),
+              iconSize: 24,
+              items: <String>['Selecione o horário', '8h', '9h', '10h']
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (String newValue) {},
+            ),
+            SizedBox(
+              height: 40,
             ),
             Container(
               height: 60,
