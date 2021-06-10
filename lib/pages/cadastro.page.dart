@@ -10,6 +10,7 @@ class CadastroPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text("Cadastre-se", textAlign: TextAlign.center),
+          centerTitle: true,
         ),
         body: Container(
           padding: EdgeInsets.only(top: 10, left: 40, right: 40),

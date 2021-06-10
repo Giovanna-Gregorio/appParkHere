@@ -2,8 +2,6 @@ import 'package:app/pages/minhaConta.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'home.page.dart';
-
 class EditarUsuarioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,6 +9,7 @@ class EditarUsuarioPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text("Editar Cadastro", textAlign: TextAlign.center),
+          centerTitle: true,
         ),
         body: Container(
           padding: EdgeInsets.only(top: 10, left: 40, right: 40),

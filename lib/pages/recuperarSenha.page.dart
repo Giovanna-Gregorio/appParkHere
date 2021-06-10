@@ -7,7 +7,9 @@ class RecuperarSenhaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('Esqueci a Senha'), backgroundColor: Colors.black),
+            centerTitle: true,
+            title: Text('Esqueci a Senha'),
+            backgroundColor: Colors.black),
         body: Container(
             padding: EdgeInsets.only(top: 40, left: 40, right: 40),
             color: Colors.white,

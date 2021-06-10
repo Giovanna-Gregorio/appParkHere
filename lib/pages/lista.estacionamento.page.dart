@@ -8,6 +8,7 @@ class ListaEstacionamentosPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+            centerTitle: true,
             title: Text('Lista de Estabelecimentos'),
             backgroundColor: Colors.black),
         body: Container(
